@@ -1,0 +1,63 @@
+1. Widok listy produktów
+2. Lista kategorii na płasko (jeden poziom)
+3. Szczegółowy widok produktu
+4. Koszyk, który utrzymuje trwały stan po stronie bazy danych
+5. Realizacja zakupu
+
+Product:
+- id
+- category_id (many:1)
+- name
+- description
+- image url
+- price
+- available quantity
+
+create table products(id int auto_increment, category_id int, name varchar(50), description varchar(255), image_url varchar(2000),price decimal(7,2), available_quantity int,
+    primary key(id), foreign key(category_id) references  category(id));
+
+Category:
+- id
+- name
+- description
+create table category(id int auto_increment, name varchar(50), description varchar(255),primary key (id));
+
+Cart:
+- id
+- cookie
+- cartItem_id(1:many)
+- grandTotal
+
+Cart Items
+- id
+- cart_id (1:1)
+- product id
+- quantity
+
+User
+- id
+- email
+- phone
+- first name
+- last name
+- address
+- post code
+- city
+- password NULL
+
+Order:
+- id
+- cart id (1:1)
+- user id (many:1)
+- payment_method_id
+- shipping_method_id
+- total price
+
+Payment Methods:
+- id
+- name
+
+Shipping Methods:
+- id
+- name
+- price
