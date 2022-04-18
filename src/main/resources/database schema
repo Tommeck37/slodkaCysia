@@ -47,7 +47,7 @@ User
 
 Order:
 - id
-- cart id (1:1)
+- cart id (many:1)
 - user id (many:1)
 - payment_method_id
 - shipping_method_id
