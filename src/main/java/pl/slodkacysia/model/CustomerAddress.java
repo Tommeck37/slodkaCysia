@@ -7,8 +7,7 @@ import javax.validation.constraints.NotNull;
 @Entity
 public class CustomerAddress {
     @Id
-    @Column(name = "id", nullable = false)
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotNull

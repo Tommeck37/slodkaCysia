@@ -9,8 +9,7 @@ import javax.validation.constraints.Size;
 @Entity
 public class Customer {
     @Id
-    @Column(name = "id", nullable = false)
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Size(min=5,max=30)
     private String customerName;

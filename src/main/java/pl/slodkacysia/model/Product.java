@@ -10,8 +10,7 @@ import java.util.Map;
 @Entity
 public class Product {
     @Id
-    @Column(name = "id", nullable = false)
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String productName;
 
