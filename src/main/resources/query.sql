@@ -11,7 +11,6 @@ create table user(id int auto_increment, email varchar(100), phone varchar(50), 
 
 create table orders(id int auto_increment, cart_id int, user_id int, payment_method_id int, shipping_method_id int, grand_total int, primary key(id), foreign key (user_id) references user(id), foreign key (cart_id) references cart(id));
 
-
 create table payment_methods(id int auto_increment, name varchar(50), primary key (id));
 
 create table shipping_methods(id int auto_increment, name varchar(50), price int, primary key (id));
