@@ -3,7 +3,7 @@ create table products(id int auto_increment, category_id int, name varchar(50), 
 
 create table category(id int auto_increment, name varchar(50), description varchar(255),primary key (id));
 
-create table cart(id int auto_increment, cartItem_id int, grandTotal int, primary key (id), foreign key(cartItem_id) references cartItem(id));
+create table cart(id int auto_increment, cartItem_id int, primary key (id), foreign key(cartItem_id) references cartItem(id));
 
 create table cartItem(id int auto_increment, cart_id int, product_id int, quantity int, primary key (id));
 
@@ -11,8 +11,6 @@ create table user(id int auto_increment, email varchar(100), phone varchar(50), 
 
 create table orders(id int auto_increment, cart_id int, user_id int, payment_method_id int, shipping_method_id int, grand_total int, primary key(id), foreign key (user_id) references user(id), foreign key (cart_id) references cart(id));
 
-ALTER TABLE cart
-DROP COLUMN grandTotal;
 
 create table payment_methods(id int auto_increment, name varchar(50), primary key (id));
 
