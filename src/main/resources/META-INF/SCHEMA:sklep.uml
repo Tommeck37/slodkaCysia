@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>03cc0a63-ec88-4783-9bc6-924331140d1f.SCHEMA:sklep</OriginalElement>
+  <nodes>
+    <node x="108.00000000000006" y="537.0">03cc0a63-ec88-4783-9bc6-924331140d1f.TABLE:sklep.shipping_methods</node>
+    <node x="294.50000000000006" y="31.0">03cc0a63-ec88-4783-9bc6-924331140d1f.TABLE:sklep.products</node>
+    <node x="329.00000000000006" y="284.0">03cc0a63-ec88-4783-9bc6-924331140d1f.TABLE:sklep.cartItem</node>
+    <node x="326.00000000000006" y="549.0">03cc0a63-ec88-4783-9bc6-924331140d1f.TABLE:sklep.cart</node>
+    <node x="294.50000000000006" y="-126.0">03cc0a63-ec88-4783-9bc6-924331140d1f.TABLE:sklep.category</node>
+    <node x="484.0" y="549.0">03cc0a63-ec88-4783-9bc6-924331140d1f.TABLE:sklep.payment_methods</node>
+    <node x="-101.0" y="465.0">03cc0a63-ec88-4783-9bc6-924331140d1f.TABLE:sklep.user</node>
+    <node x="200.00000000000006" y="766.0">03cc0a63-ec88-4783-9bc6-924331140d1f.TABLE:sklep.orders</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="03cc0a63-ec88-4783-9bc6-924331140d1f.TABLE:sklep.orders" target="03cc0a63-ec88-4783-9bc6-924331140d1f.TABLE:sklep.cart" relationship="REFERENCES">
+      <point x="25.25" y="-89.5" />
+      <point x="326.25000000000006" y="736.0" />
+      <point x="395.00000000000006" y="736.0" />
+      <point x="0.0" y="41.5" />
+    </edge>
+    <edge source="03cc0a63-ec88-4783-9bc6-924331140d1f.TABLE:sklep.cartItem" target="03cc0a63-ec88-4783-9bc6-924331140d1f.TABLE:sklep.products" relationship="REFERENCES">
+      <point x="0.0" y="-65.5" />
+      <point x="0.0" y="101.5" />
+    </edge>
+    <edge source="03cc0a63-ec88-4783-9bc6-924331140d1f.TABLE:sklep.orders" target="03cc0a63-ec88-4783-9bc6-924331140d1f.TABLE:sklep.user" relationship="REFERENCES">
+      <point x="-75.75" y="-89.5" />
+      <point x="225.25000000000006" y="746.0" />
+      <point x="-6.5" y="746.0" />
+      <point x="0.0" y="125.5" />
+    </edge>
+    <edge source="03cc0a63-ec88-4783-9bc6-924331140d1f.TABLE:sklep.orders" target="03cc0a63-ec88-4783-9bc6-924331140d1f.TABLE:sklep.shipping_methods" relationship="REFERENCES">
+      <point x="-25.25" y="-89.5" />
+      <point x="275.75000000000006" y="736.0" />
+      <point x="207.00000000000006" y="736.0" />
+      <point x="0.0" y="53.5" />
+    </edge>
+    <edge source="03cc0a63-ec88-4783-9bc6-924331140d1f.TABLE:sklep.orders" target="03cc0a63-ec88-4783-9bc6-924331140d1f.TABLE:sklep.payment_methods" relationship="REFERENCES">
+      <point x="75.75" y="-89.5" />
+      <point x="376.75000000000006" y="746.0" />
+      <point x="585.0" y="746.0" />
+      <point x="0.0" y="41.5" />
+    </edge>
+    <edge source="03cc0a63-ec88-4783-9bc6-924331140d1f.TABLE:sklep.products" target="03cc0a63-ec88-4783-9bc6-924331140d1f.TABLE:sklep.category" relationship="REFERENCES">
+      <point x="0.0" y="-101.5" />
+      <point x="0.0" y="53.5" />
+    </edge>
+    <edge source="03cc0a63-ec88-4783-9bc6-924331140d1f.TABLE:sklep.cart" target="03cc0a63-ec88-4783-9bc6-924331140d1f.TABLE:sklep.cartItem" relationship="REFERENCES">
+      <point x="34.5" y="-41.5" />
+      <point x="429.5" y="440.0" />
+      <point x="428.0" y="440.0" />
+      <point x="33.0" y="65.5" />
+    </edge>
+    <edge source="03cc0a63-ec88-4783-9bc6-924331140d1f.TABLE:sklep.cartItem" target="03cc0a63-ec88-4783-9bc6-924331140d1f.TABLE:sklep.cart" relationship="REFERENCES">
+      <point x="-33.0" y="65.5" />
+      <point x="362.00000000000006" y="440.0" />
+      <point x="360.50000000000006" y="440.0" />
+      <point x="-34.5" y="-41.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.7717690192483959" showDependencies="false" x="292.5" y="409.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Columns</Category>
+    <Category>Comments</Category>
+    <Category>Key columns</Category>
+    <Category>Virtual foreign keys</Category>
+  </Categories>
+</Diagram>
+
