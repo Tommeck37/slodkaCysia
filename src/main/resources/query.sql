@@ -14,3 +14,31 @@ create table orders(id int auto_increment, cart_id int, user_id int, payment_met
 create table payment_methods(id int auto_increment, name varchar(50), primary key (id));
 
 create table shipping_methods(id int auto_increment, name varchar(50), price int, primary key (id));
+
+show tables;
+select * from cart;
+
+ALTER TABLE orders
+    RENAME TO purchase;
+
+ALTER TABLE purchase
+    ADD status varchar(7) AFTER grand_total;
+
+ALTER TABLE cart
+add total_amount int after id;
+
+alter table cart
+add session_id varchar(100) after total_amount;
+
+alter table cartItem
+add price varchar(100) after product_id;
+
+alter table shipping_methods
+rename to shipping_method;
+
+alter table products
+rename to product;
+
+ALTER TABLE cartItem MODIFY COLUMN price double;
+ALTER TABLE cart MODIFY COLUMN total_amount double;
+ALTER TABLE purchase MODIFY COLUMN grand_total double;
