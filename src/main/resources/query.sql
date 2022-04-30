@@ -39,6 +39,6 @@ rename to shipping_method;
 alter table products
 rename to product;
 
-ALTER TABLE cartItem MODIFY COLUMN price double;
-ALTER TABLE cart MODIFY COLUMN total_amount double;
-ALTER TABLE purchase MODIFY COLUMN grand_total double;
+ALTER TABLE cartItem MODIFY COLUMN price decimal(15,2);
+ALTER TABLE cart MODIFY COLUMN total_amount decimal(15,2);
+ALTER TABLE purchase MODIFY COLUMN grand_total decimal(15,2);
